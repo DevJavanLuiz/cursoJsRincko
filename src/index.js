@@ -219,7 +219,7 @@ import chalk from "chalk";
 
 // main();
 
-// *******************************************************
+// // *******************************************************
 
 // SPREAD E REST
 
@@ -246,10 +246,74 @@ import chalk from "chalk";
 
 // console.log(updatedPlayer)
 
-const numbers = [1, 2, 4, 7, 2, 3];
+// const numbers = [1, 2, 4, 7, 2, 3];
 
-const [one, two, ...others] = numbers;
+// const [one, two, ...others] = numbers;
 
-console.log(numbers);
-console.log(one, two);
-console.log(others);
+// console.log(numbers);
+// console.log(one, two);
+// console.log(others);
+
+// *******************************************************
+
+// JSON JavaScript Object Notation
+
+// import json from '../person.json' with {type: "json"};
+
+// console.log(json)
+
+// const person = {
+//   name: "Javan",
+//   age: 21,
+//   isProgrammer: true,
+//   languages: ["javaScript", "React"],
+// };
+
+// const stringJson = JSON.stringify(person);
+
+// const arrayJson = [];
+
+// arrayJson.push(stringJson)
+
+// console.log(stringJson);
+import { writeFileSync, readFileSync } from "node:fs";
+
+// const person = {
+//   name: "Javan",
+//   age: 21,
+//   isProgrammer: true,
+//   languages: ["javaScript", "React"],
+// };
+
+// writeFileSync("./newperson.json", JSON.stringify(person, null, 2), "utf-8");
+
+// const stringJson = readFileSync("./newperson.json", "utf-8");
+
+// console.log(stringJson);
+
+// const formatedJson = JSON.parse(stringJson);
+
+// console.log(formatedJson);
+
+// async function main() {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+//   const data = await response.json();
+
+//   console.log(data);
+// }
+
+// main();
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const person1 = new Person('Javan', 21);
+const person2 = new Person('Luiz', 21);
+const person3 = new Person('Sabrina', 20);
+
+
+writeFileSync("./newperson2.json", JSON.stringify([person1, person2, person3], null, 2), "utf-8");

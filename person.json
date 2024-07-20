@@ -1,0 +1,9 @@
+{
+    "name": "Javan",
+    "age": 21,
+    "isProgrammer": true,
+    "languages":[
+        "javaScript",
+        "React"
+    ]
+}
